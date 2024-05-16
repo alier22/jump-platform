@@ -50,7 +50,7 @@ class Player(pg.sprite.Sprite):
         if self.pos.x < 0:
             self.pos.x = WIDTH
             
-        self.rect.top = self.pos
+        self.rect.midbottom = self.pos
 
 class Platform(pg.sprite.Sprite):
     def __init__(self, x, y, w, h):
