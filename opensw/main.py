@@ -18,6 +18,16 @@ class Game:
         self.font_name = pg.font.match_font(FONT_NAME)
         self.load_data()
         
+    def load_data(self):
+        #load high score
+        self.dir = path.dirname(__file__)
+        with open(path.join(self.dir, HS_FILE),"w") as f:
+            try:
+                self.highscore = int(f.read())
+            except:
+                self.highscore = -1
+    
+    
     def new(self):
         #reset game(게임 죽으면 다시 시작하는거)
         self.all_sprites = pg.sprite.Group()
