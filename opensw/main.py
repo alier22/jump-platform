@@ -4,6 +4,7 @@ import pygame as pg  # type: ignore
 import random
 from settings import *
 from sprites import * 
+from os import path
 
 class Game:
     def __init__(self):
