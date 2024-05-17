@@ -25,7 +25,7 @@ class Game:
             try:
                 self.highscore = int(f.read())
             except:
-                self.highscore = -1
+                self.highscore = 0
     
     
     def new(self):
