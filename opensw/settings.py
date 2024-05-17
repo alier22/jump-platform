@@ -1,9 +1,11 @@
 
-TITLE = " 새싹 레이스 : 하늘을 향한 모험"
+TITLE = " jumpy"
 # game option  / settings
 WIDTH = 480
 HEIGHT = 600
 FPS = 60
+FONT_NAME = 'arial'
+HS_FILE = "highscore.txt"
 
 # Player properties 속도 조절 
 PLAYER_ACC = 0.5
