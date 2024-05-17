@@ -15,6 +15,8 @@ class Game:
         pg.display.set_caption(TITLE)
         self.clock = pg.time.Clock()
         self.running = True
+        self.font_name = pg.font.match_font(FONT_NAME)
+        self.load_data()
         
     def new(self):
         #reset game(게임 죽으면 다시 시작하는거)
