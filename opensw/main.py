@@ -30,6 +30,7 @@ class Game:
     
     def new(self):
         #reset game(게임 죽으면 다시 시작하는거)
+        self.score = 0
         self.all_sprites = pg.sprite.Group()
         self.platforms = pg.sprite.Group()
         self.player = Player(self)
@@ -38,16 +39,6 @@ class Game:
             p = Platform(*plat)
             self.all_sprites.add(p)
             self.platforms.add(p)
-
-        '''
-        p1 = Platform(0,HEIGHT -40, WIDTH, 40)
-        self.all_sprites.add(p1)
-        self.platforms.add(p1)
-        p2 = Platform(WIDTH/2 -50, HEIGHT * 3 /4 , 100, 20)
-        self.all_sprites.add(p2) 
-        self.platforms.add(p2)
-        '''
-
         self.run()
 
     def run(self):
