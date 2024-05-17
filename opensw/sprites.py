@@ -27,7 +27,7 @@ class Player(pg.sprite.Sprite):
         hits = pg.sprite.spritecollide(self, self.game.platforms, False)
         self.rect.x -= 1
         if hits:
-            self.vel.y = -40
+            self.vel.y = -30
 
 
 
@@ -52,6 +52,7 @@ class Player(pg.sprite.Sprite):
             
         self.rect.midbottom = self.pos
 
+
 class Platform(pg.sprite.Sprite):
     def __init__(self, x, y, w, h):
         pg.sprite.Sprite.__init__(self)
@@ -60,9 +61,5 @@ class Platform(pg.sprite.Sprite):
         self.rect = self.image.get_rect()
         self.rect.x = x
         self.rect.y = y
-
-
-
-
 
 
