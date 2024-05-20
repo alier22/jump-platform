@@ -15,7 +15,7 @@ class Game:
         pg.display.set_caption(TITLE)
         self.clock = pg.time.Clock()
         self.running = True
-        self.font_name = pg.font.match_font(FONT_NAME)
+        self.font_name = path.join(path.dirname(__file__), FONT_NAME)
         self.load_data()
 
     def load_data(self):
@@ -123,7 +123,7 @@ class Game:
     def show_start_screen(self):
         #game splash / start screen
         self.screen.fill(LIGHTBLUE)
-        self.draw_text(TITLE, 48, WHITE, WIDTH/2, HEIGHT/4)
+        self.draw_text(TITLE, 30, WHITE, WIDTH/2, HEIGHT/4)
         self.draw_text("Arrows to move, Space to jump",22, WHITE, WIDTH/2, HEIGHT/2)
         self.draw_text("Press a key to play", 22,WHITE, WIDTH/2, HEIGHT*3/4)
         self.draw_text("High Score: "+ str(self.highscore), 22, WHITE, WIDTH/2, 15)
