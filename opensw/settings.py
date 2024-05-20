@@ -4,7 +4,7 @@ TITLE = " jumpy"
 WIDTH = 480
 HEIGHT = 600
 FPS = 60
-FONT_NAME = 'arial'
+FONT_NAME = 'NanumBarunGothicBold.ttf'
 HS_FILE = "highscore.txt"
 
 # Player properties 속도 조절 
