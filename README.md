@@ -1,9 +1,9 @@
 # 🌱새싹 레이스 : 하늘을 향한 모험
 
 
- 2024-1 opensw 팀 프로젝트
- pygame을 이용한 Jump Platform 만들기
- 기간 : 2024.04~2024.06
+ 2024-1 opensw 팀 프로젝트\
+ pygame을 이용한 Jump Platform 만들기\
+ 기간 : 2024.04~2024.06\
 
 # Team : 2NE1
 
