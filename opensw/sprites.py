@@ -10,13 +10,19 @@ vec = pg.math.Vector2
 
 class Player(pg.sprite.Sprite):
     def __init__(self,game):
-        pg.sprite.Sprite.__init__(self)
+        self._layer = PLATFORM_LAYER
+        self.groups = game.all_sprites
+        pg.sprite.Sprite.__init__(self, self.groups)
         self.game = game
-        self.image = pg.Surface((30,40))
-        self.image.fill(YELLOW)
+        self.walking = False
+        self.jumping = False
+        self.current_frame = 0
+        self.last_update = 0
+        self.load_images()
+        self.image = self.standing_frames[0]
         self.rect = self.image.get_rect()
-        self.rect.center = (WIDTH /2 , HEIGHT /2)
-        self.pos = vec(WIDTH/2, HEIGHT/2)# 객체의 위치를 나타내는 변수
+        self.rect.center = (40, HEIGHT - 100)
+        self.pos = vec(40, HEIGHT - 100)# 객체의 위치를 나타내는 변수
         self.vel = vec(0, 0)# vel = 속도, 초기 속도 0 , 정지를 의미
         self.acc = vec(0, 0) # acc = 가속도 , 초기 가속도 0으로 설정
 
