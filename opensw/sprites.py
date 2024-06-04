@@ -40,7 +40,12 @@ class Player(pg.sprite.Sprite):
         self.jump_frame = self.game.spritesheet.get_image(1372, 1, 343, 369, scale = 0.65)
         self.jump_frame.set_colorkey(BLACK)
 
-    
+
+    def jump_cut(self):
+        if self.jumping:
+            if self.vel.y < -3:
+                self.vel.y = -3
+                
     def jump(self):
         
         # jump only if standing
