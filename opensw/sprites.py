@@ -49,11 +49,14 @@ class Player(pg.sprite.Sprite):
     def jump(self):
         
         # jump only if standing
-        self.rect.x += 1
+        self.rect.y += 2
         hits = pg.sprite.spritecollide(self, self.game.platforms, False)
-        self.rect.x -= 1
-        if hits:
-            self.vel.y = -40
+        self.rect.y -= 2
+        if hits and not self.jumping:
+            
+            self.jumping = True
+            self.game.jump_sound.play()
+            self.vel.y = -PLAYER_JUMP
 
 
 
@@ -70,12 +73,13 @@ class Player(pg.sprite.Sprite):
         # equations of motion
         self.vel += self.acc
         self.pos += self.vel + 0.5 * self.acc
+        
         #wrap around the side of the screen
-        if self.pos.x > WIDTH:
-            self.pos.x = 0
-        if self.pos.x < 0:
-            self.pos.x = WIDTH
-            
+        if self.pos.x > WIDTH + self.rect.width / 2:
+            self.pos.x = 0 - self.rect.width / 2
+        if self.pos.x < 0 - self.rect.width / 2:
+            self.pos.x = WIDTH + self.rect.width / 2
+
         self.rect.midbottom = self.pos
 
 
