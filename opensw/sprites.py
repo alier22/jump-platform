@@ -20,6 +20,21 @@ class Player(pg.sprite.Sprite):
         self.vel = vec(0, 0)# vel = 속도, 초기 속도 0 , 정지를 의미
         self.acc = vec(0, 0) # acc = 가속도 , 초기 가속도 0으로 설정
 
+    def load_images(self):
+        self.standing_frames = [self.game.spritesheet.get_image(1009, 372, 339, 419, scale = 0.65),
+                                self.game.spritesheet.get_image(1009, 372, 339, 419, scale = 0.65)]
+        for frame in self.standing_frames:
+            frame.set_colorkey(BLACK)
+        self.walk_frames_r = [self.game.spritesheet.get_image(1, 372, 334, 383, scale = 0.65),
+                              self.game.spritesheet.get_image(337, 372, 326, 384, scale = 0.65)]
+        self.walk_frames_l = []
+        for frame in self.walk_frames_r:
+            frame.set_colorkey(BLACK)
+            self.walk_frames_l.append(pg.transform.flip(frame, True, False))
+        self.jump_frame = self.game.spritesheet.get_image(1372, 1, 343, 369, scale = 0.65)
+        self.jump_frame.set_colorkey(BLACK)
+
+    
     def jump(self):
         
         # jump only if standing
