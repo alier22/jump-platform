@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with TexturePacker https://www.codeandweb.com/texturepacker -->
+<!-- $TexturePacker:SmartUpdate:c7c172d01ebf760b2342ed63fd4a5256:ee9c90c7c63cd9579644296bbe375f0d:672f7712c8c97087ed7036a9e2899015$ -->
+<!--Format:
+n  => name of the sprite
+x  => sprite x pos in texture
+y  => sprite y pos in texture
+w  => sprite width (may be trimmed)
+h  => sprite height (may be trimmed)
+pX => x pos of the pivot point (relative to sprite width)
+pY => y pos of the pivot point (relative to sprite height)
+oX => sprite's x-corner offset (only available if trimmed)
+oY => sprite's y-corner offset (only available if trimmed)
+oW => sprite's original width (only available if trimmed)
+oH => sprite's original height (only available if trimmed)
+r => 'y' only set if sprite is rotated
+with polygon mode enabled:
+vertices   => points in sprite coordinate system (x0,y0,x1,y1,x2,y2, ...)
+verticesUV => points in sheet coordinate system (x0,y0,x1,y1,x2,y2, ...)
+triangles  => sprite triangulation, 3 vertex indices per triangle
+-->
+<TextureAtlas imagePath="jumper.png" width="1801" height="1495">
+    <sprite n="cloud.png" x="1100" y="794" w="700" h="700"/>
+    <sprite n="enemies_1.png" x="341" y="794" w="374" h="515"/>
+    <sprite n="enemies_2.png" x="717" y="794" w="381" h="519"/>
+    <sprite n="ground_grass.png" x="74" y="1" w="380" h="94"/>
+    <sprite n="ground_grass_broken.png" x="456" y="1" w="380" h="94"/>
+    <sprite n="ground_grass_small.png" x="838" y="1" w="201" h="100"/>
+    <sprite n="ground_grass_small_broken.png" x="1041" y="1" w="200" h="100"/>
+    <sprite n="Kirbydead.png" x="665" y="372" w="342" h="418"/>
+    <sprite n="Kirbyjump.png" x="1243" y="1" w="343" h="369"/>
+    <sprite n="Kirbystand.png" x="1009" y="372" w="339" h="419"/>
+    <sprite n="Kirbywalk1-2.png" x="337" y="372" w="326" h="384"/>
+    <sprite n="Kirbywalk2.png" x="1" y="372" w="334" h="383"/>
+    <sprite n="KirbywalkLEFT.png" x="1350" y="372" w="338" h="420"/>
+    <sprite n="KirbywalkRIGHT.png" x="1" y="794" w="338" h="420"/>
+    <sprite n="powerup_jetpack.png" x="1" y="1" w="71" h="70"/>
+</TextureAtlas>
