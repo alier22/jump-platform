@@ -37,6 +37,8 @@ class Player(pg.sprite.Sprite):
         self.pos = vec(40, HEIGHT - 100)# 객체의 위치를 나타내는 변수
         self.vel = vec(0, 0)# vel = 속도, 초기 속도 0 , 정지를 의미
         self.acc = vec(0, 0) # acc = 가속도 , 초기 가속도 0으로 설정
+        self.hit_image = self.game.spritesheet.get_image(665, 372, 342, 418, scale=0.65)  ###충돌 시 보여줄 이미지
+        self.hit_image.set_colorkey(BLACK)
 
     def load_images(self):
         self.standing_frames = [self.game.spritesheet.get_image(1009, 372, 339, 419, scale = 0.65),
@@ -49,9 +51,11 @@ class Player(pg.sprite.Sprite):
         for frame in self.walk_frames_r:
             frame.set_colorkey(BLACK)
             self.walk_frames_l.append(pg.transform.flip(frame, True, False))
-        self.jump_frame = self.game.spritesheet.get_image(1372, 1, 343, 369, scale = 0.65)
+        self.jump_frame = self.game.spritesheet.get_image(1243, 1, 343, 369, scale = 0.65)
         self.jump_frame.set_colorkey(BLACK)
-
+        
+    def hit(self):
+        self.image = self.hit_image
 
     def jump_cut(self):
         if self.jumping:
@@ -149,8 +153,8 @@ class Platform(pg.sprite.Sprite):
         self.groups = game.all_sprites, game.platforms
         pg.sprite.Sprite.__init__(self, self.groups)
         self.game = game
-        images = [self.game.spritesheet.get_image(765, 1, 201, 100),
-                  self.game.spritesheet.get_image(1, 1, 380, 94)]
+        images = [self.game.spritesheet.get_image(456, 1, 380, 94),
+                  self.game.spritesheet.get_image(1041, 1, 200, 100)]
         self.image = choice(images)
         self.image.set_colorkey(BLACK)
         self.rect = self.image.get_rect()
@@ -167,7 +171,7 @@ class Pow(pg.sprite.Sprite):
         self.game = game
         self.plat = plat
         self.type = choice(['boost'])
-        self.image = self.game.spritesheet.get_image(820, 1805, 71, 70)
+        self.image = self.game.spritesheet.get_image(1, 1, 71, 70)
         self.image.set_colorkey(BLACK)
         self.rect = self.image.get_rect()
         self.rect = self.image.get_rect()
