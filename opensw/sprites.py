@@ -1,13 +1,25 @@
 # Sprite classes for platform game
 
 
-from settings import *
 import pygame as pg
-vec = pg.math.Vector2 
+from settings import *
+from random import choice, randrange
+vec = pg.math.Vector2
 # 2차원 벡터 클래스 (위치, 속도, 가속도 표현하고 조작 가능)
 # 게임 객체의 이동, 충돌 감지, 힘 및 방향 계산 들을 구현할 수 있다.
 
+class Spritesheet:
+    # utility class for loading and parsing spritesheets
+    def __init__(self, filename):
+        self.spritesheet = pg.image.load(filename).convert()
 
+    def get_image(self, x, y, width, height, scale = 1):
+        # grab an image out of a larger spritesheet
+        image = pg.Surface((width, height),pg.SRCALPHA)
+        image.blit(self.spritesheet, (0, 0), (x, y, width, height))
+        image = pg.transform.scale(image, (width // 2*  scale , height // 2 * scale))
+        return image
+        
 class Player(pg.sprite.Sprite):
     def __init__(self,game):
         self._layer = PLATFORM_LAYER
