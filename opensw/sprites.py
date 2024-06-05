@@ -41,17 +41,17 @@ class Player(pg.sprite.Sprite):
         self.hit_image.set_colorkey(BLACK)
 
     def load_images(self):
-        self.standing_frames = [self.game.spritesheet.get_image(1009, 372, 339, 419, scale = 0.65),
-                                self.game.spritesheet.get_image(1009, 372, 339, 419, scale = 0.65)]
+        self.standing_frames = [self.game.spritesheet.get_image(1009, 372, 339, 419, scale = 0.50),
+                                self.game.spritesheet.get_image(1009, 372, 339, 419, scale = 0.50)]
         for frame in self.standing_frames:
             frame.set_colorkey(BLACK)
-        self.walk_frames_r = [self.game.spritesheet.get_image(1, 372, 334, 383, scale = 0.65),
-                              self.game.spritesheet.get_image(337, 372, 326, 384, scale = 0.65)]
+        self.walk_frames_r = [self.game.spritesheet.get_image(1, 372, 334, 383, scale = 0.50),
+                              self.game.spritesheet.get_image(337, 372, 326, 384, scale = 0.50)]
         self.walk_frames_l = []
         for frame in self.walk_frames_r:
             frame.set_colorkey(BLACK)
             self.walk_frames_l.append(pg.transform.flip(frame, True, False))
-        self.jump_frame = self.game.spritesheet.get_image(1243, 1, 343, 369, scale = 0.65)
+        self.jump_frame = self.game.spritesheet.get_image(1243, 1, 343, 369, scale = 0.50)
         self.jump_frame.set_colorkey(BLACK)
         
     def hit(self):
