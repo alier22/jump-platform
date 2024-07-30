@@ -13,8 +13,17 @@
 |황여진|자료조사/개발/기획|
 |홍주형|자료조사/개발/발표|
  
-# 프로젝트 개요 
+# 프로젝트 
+<img width="80%" src="{(https://github.com/user-attachments/assets/209cb4db-7309-4dcb-a374-7c7f5ee88888)}"/>
+<img width="80%" src="{https://github.com/user-attachments/assets/9a66b87e-ccdd-4b9b-b389-0e05aca25f6c}"/>
+<img width="80%" src="https://github.com/user-attachments/assets/80d6ff7c-a0f0-406b-addd-8caeb377be97"/>
+<img width="80%" src="https://github.com/user-attachments/assets/5cebb4c6-622b-4670-b72c-cab616269728"/>
+<img width="80%" src="https://github.com/user-attachments/assets/8956af98-3df9-4eca-9ebb-f3264376271f"/>
 
 
-# 캐릭터 생성
+![opensw_발표_1](https://github.com/user-attachments/assets/209cb4db-7309-4dcb-a374-7c7f5ee88888)
+![opensw_발표_2](https://github.com/user-attachments/assets/9a66b87e-ccdd-4b9b-b389-0e05aca25f6c)
+![opensw_발표_3](https://github.com/user-attachments/assets/80d6ff7c-a0f0-406b-addd-8caeb377be97)
+![opensw_발표_4](https://github.com/user-attachments/assets/5cebb4c6-622b-4670-b72c-cab616269728)
+![opensw_발표_5](https://github.com/user-attachments/assets/8956af98-3df9-4eca-9ebb-f3264376271f)
 
